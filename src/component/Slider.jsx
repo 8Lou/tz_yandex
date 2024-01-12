@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import mockData from "./mockData";
+import mockData from "../assets/mockData";
 
 
 const Slider = () => {
-    return (
-        <SliderWrapper>
-            {mockData.map((item, index) => (
-                <Slide key={index} doubleSize={item.title.length > 35}>
-                    {item.title}
-                </Slide>
-            ))}
-        </SliderWrapper>
-    );
+  return (
+    <SliderWrapper>
+      {mockData.map((item, index) => (
+        <Slide key={index} doubleSize={item.title.length > 35}>
+          {item.title}
+        </Slide>
+      ))}
+    </SliderWrapper>
+  );
 };
 
 const SliderWrapper = styled.div`
@@ -33,3 +33,5 @@ const Slide = styled.div`
     background-color: lightgreen;
   }
 `;
+
+export default Slider;
