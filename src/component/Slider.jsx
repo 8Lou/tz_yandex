@@ -1,36 +1,46 @@
 import React from 'react';
 import styled from 'styled-components';
-import mockData from "../assets/mockData";
+import mockData from "../assets/mockData.ts";
 
 
 const Slider = () => {
   return (
     <SliderWrapper>
       {mockData.map((item, index) => (
-        <Slide key={index} doubleSize={item.title.length > 35}>
-          {item.title}
+        <Slide key={index}>
+          <img src={item.img} alt={item.title} />
+          <div>
+            <h3>{item.title}</h3>
+            <p>{item.date}</p>
+          </div>
         </Slide>
       ))}
     </SliderWrapper>
   );
 };
 
+
+// doubleSize = { item.title.length > 35 } >
+// { item.title }
+
 const SliderWrapper = styled.div`
-  /* Стили для обертки слайдера */
+  display: flex;
+  overflow-x: auto;
 `;
 
 const Slide = styled.div`
-  width: ${props => (props.doubleSize ? "200px" : "100px")};
-  height: ${props => (props.doubleSize ? "200px" : "100px")};
-  border-radius: ${props => (props.doubleSize ? "50%" : "5px")};
-  background-color: lightblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
+  min-width: 300px;
+  margin: 0 10px; 
+  overflow: hidden; 
 
-  &:nth-child(odd) {
-    background-color: lightgreen;
+  img {
+    width: 100%; 
+    height: auto;
+    border-radius: 0 50%; 
+  }
+
+div {
+    padding: 10px;
   }
 `;
 
