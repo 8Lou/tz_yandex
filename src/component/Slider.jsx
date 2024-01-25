@@ -72,13 +72,13 @@ const NextSlideButton = styled.button`
 `;
 
 const LeftArrowIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#7479A1" width="28px" height="50px">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 24" fill="#7479A1" width="28px" height="50px">
     <path d="M0 12l10-8v6h14v4h-14v6z" />
   </svg>
 );
 
 const RightArrowIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#7479A1" width="28px" height="50px">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 24" fill="#7479A1" width="28px" height="50px">
     <path d="M24 12l-10-8v6h-14v4h14v6z" />
   </svg>
 );
